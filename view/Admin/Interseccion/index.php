@@ -19,14 +19,14 @@
             <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="navbarNav">
                 <ul class="lg:flex lg:items-center lg:justify-between text-base text-gray-700 pt-4 lg:pt-0">
                     <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" href="/proyect_ts2/view/Admin/Usuario">Usuario</a></li>
-                    <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" href="/proyect_ts2/view/Admin/Interseccion">Intersecciones</a></li>
+                    <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" href="/proyect_ts2/view/Admin/Usuario/read.php">Intersecciones</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container mx-auto mt-4">
-        <h1 class="my-5 text-2xl font-bold">Bienvenido a la administración de usuarios</h1>
+        <h1 class="my-5 text-2xl font-bold">Bienvenido a la administración de Interseccion</h1>
         <!-- Contenido de la página -->
         <?php include "create_user.php"; ?>
         

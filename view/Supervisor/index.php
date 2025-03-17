@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración de Usuarios</title>
+    <title>Supervisor de Usuarios</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
     <nav class="bg-blue-300 p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a class="text-xl font-bold" href="#">Administrador Usuario</a>
+            <a class="text-xl font-bold" href="#">Supervisor Usuario</a>
             <button class="block lg:hidden px-3 py-2 border rounded text-gray-700 border-gray-400 hover:text-gray-900 hover:border-gray-900" id="navbar-toggler">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
@@ -26,14 +26,7 @@
     </nav>
 
     <div class="container mx-auto mt-4">
-        <h1 class="my-5 text-2xl font-bold">Bienvenido a la administración de usuarios</h1>
-        <!-- Contenido de la página -->
-        <?php include "create_user.php"; ?>
-        
-        <?php include "view_user.php"; ?>
-        <!-- Fin del contenido de la página -->
-        <?php include "../../../db/index.php"; ?>
-        <?php include "../../../model/Admin/usuario.php"; ?>
+        <h1 class="my-5 text-2xl font-bold">Bienvenido a Supervisor</h1>
     </div>
 
     <script>

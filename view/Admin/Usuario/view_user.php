@@ -3,10 +3,10 @@
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Nombre
+                    ID
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Apellido
+                    Nombre
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Rol
@@ -20,40 +20,37 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Apple MacBook Pro 17"
-                </th>
-                <td class="px-6 py-4">
-                    Silver
-                </td>
-                <td class="px-6 py-4">
-                    Laptop
-                </td>
-                <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
-                </td>
-                <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</a>
-                </td>
-            </tr>
+            <?php
+            // Crear conexión
+            include "../../../db/index.php";
+            // Obtener usuarios
+            include "../../../model/Admin/usuario.php";
+
+            $usuarios = obtenerUsuarios();
+            foreach ($usuarios as $usuario) {
+            ?>
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Magic Mouse 2
+                    <?php echo $usuario['id']; ?>
                 </th>
                 <td class="px-6 py-4">
-                    Black
+                    <?php echo $usuario['nombre']; ?>
                 </td>
                 <td class="px-6 py-4">
-                    Accessories
+                    <?php echo $usuario['rol_id']; ?>
                 </td>
                 <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
+                    <button onclick="openModal(<?php echo htmlspecialchars(json_encode($usuario)); ?>)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</button>
                 </td>
                 <td class="px-6 py-4 text-right">
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</a>
                 </td>
             </tr>
+            <?php
+            include "edit_user.php";
+            }
+            ?>
+
         </tbody>
     </table>
 </div>

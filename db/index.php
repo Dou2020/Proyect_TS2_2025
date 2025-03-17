@@ -1,16 +1,17 @@
-<h1 class='font-bold text-2xl'>Hola desde la base de datos</h1>
-
 <?php
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "1324";
 $database = "db_pmt";
 
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-    echo "Conexión fallida: " . $conn->connect_error;
-    die("Conexión fallida: " . $conn->connect_error);
+function conexion() {
+    global $servername, $username, $password, $database;
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $conn;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 }
-echo "<h1 class='font-bold text-2xl'>conexion exitosa base de datos</h1>";
 ?>

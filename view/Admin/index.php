@@ -26,14 +26,7 @@
     </nav>
 
     <div class="container mx-auto mt-4">
-        <h1 class="my-5 text-2xl font-bold">Bienvenido a la administración de usuarios</h1>
-        <!-- Contenido de la página -->
-        <?php include "create_user.php"; ?>
-        
-        <?php include "view_user.php"; ?>
-        <!-- Fin del contenido de la página -->
-        <?php include "../../../db/index.php"; ?>
-        <?php include "../../../model/Admin/usuario.php"; ?>
+        <h1 class="my-5 text-2xl font-bold">Bienvenido a la administración</h1>
     </div>
 
     <script>

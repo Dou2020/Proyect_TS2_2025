@@ -9,7 +9,7 @@
 <body>
     <nav class="bg-blue-300 p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a class="text-xl font-bold" href="#">Administrador Usuario</a>
+            <a class="text-xl font-bold" href="#">Monitor Usuario</a>
             <button class="block lg:hidden px-3 py-2 border rounded text-gray-700 border-gray-400 hover:text-gray-900 hover:border-gray-900" id="navbar-toggler">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
@@ -26,14 +26,12 @@
     </nav>
 
     <div class="container mx-auto mt-4">
-        <h1 class="my-5 text-2xl font-bold">Bienvenido a la administración de usuarios</h1>
-        <!-- Contenido de la página -->
-        <?php include "create_user.php"; ?>
-        
-        <?php include "view_user.php"; ?>
-        <!-- Fin del contenido de la página -->
-        <?php include "../../../db/index.php"; ?>
-        <?php include "../../../model/Admin/usuario.php"; ?>
+        <h1 class="my-5 text-2xl font-bold">Bienvenido a la Monitor</h1>
+    </div>
+    <div class='container mx-auto'>
+        <div class='flex flex-col items-center justify-center h-screen'>
+            <?php include '../pista/index.php' ?>
+        </div>
     </div>
 
     <script>
