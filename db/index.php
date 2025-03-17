@@ -1,3 +1,4 @@
+hola db
 <?php
 $servername = "127.0.0.1";
 $username = "root";
@@ -11,7 +12,7 @@ function conexion() {
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        echo "Error db: " . $e->getMessage();
     }
 }
 ?>

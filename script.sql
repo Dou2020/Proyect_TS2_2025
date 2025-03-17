@@ -41,6 +41,8 @@ INSERT INTO usuarios (id, nombre, rol_id, password, estado_id) VALUES
 ('user3', 'Admin', 3, '1234', 1);
 
 SELECT * FROM usuarios;
+SELECT * FROM usuarios WHERE id = 'user1';
+SELECT * FROM usuarios WHERE id = 'user1' AND password = '1234';
 
 SELECT a.id AS id ,a.nombre AS nombre, b.nombre AS rol_id FROM usuarios a JOIN roles b ON a.rol_id = b.id
 
