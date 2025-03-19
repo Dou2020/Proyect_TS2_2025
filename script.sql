@@ -36,12 +36,13 @@ INSERT INTO estados (nombre) VALUES
 ('inactivo');
 
 INSERT INTO usuarios (id, nombre, rol_id, password, estado_id) VALUES 
-('user1', 'Admin', 1, '1234', 1),
-('user2', 'Admin', 2, '1234', 1),
-('user3', 'Admin', 3, '1234', 1);
+('user1', 'Admin', 1, '$2y$10$PsWOpPouv4xO883CXlej2Ov4/t3kTRlmi4XRonZlENHMSoFE35rUe', 1),
+('user2', 'Admin', 2, '$2y$10$PsWOpPouv4xO883CXlej2Ov4/t3kTRlmi4XRonZlENHMSoFE35rUe', 1),
+('user3', 'Admin', 3, '$2y$10$PsWOpPouv4xO883CXlej2Ov4/t3kTRlmi4XRonZlENHMSoFE35rUe', 1);
+
 
 SELECT * FROM usuarios;
-SELECT * FROM usuarios WHERE id = 'user1';
+SELECT id FROM usuarios WHERE id = 'user1';
 SELECT * FROM usuarios WHERE id = 'user1' AND password = '1234';
 
 SELECT a.id AS id ,a.nombre AS nombre, b.nombre AS rol_id FROM usuarios a JOIN roles b ON a.rol_id = b.id

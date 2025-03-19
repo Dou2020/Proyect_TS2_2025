@@ -54,6 +54,7 @@ function editarUsuario($id) {
         $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
 
         return $resultado;
+        
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
         return false;
