@@ -13,10 +13,6 @@ function getUser($username, $password) {
         // Fetch result
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        // Hash password
-        //$hash = password_hash($password, PASSWORD_DEFAULT); 
-        //echo $hash; // Guarda este hash en la base de datos
-        
         // Verify password
         if ($user) {
             return $user; // Return the role of the user

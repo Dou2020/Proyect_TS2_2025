@@ -15,26 +15,25 @@
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="sm:items-center sm:justify-between">
                     <!-- Form -->
-                    <form class="space-y-5">
+                    <form method='POST' action='/proyect_ts2/controler/Admin/createUser.php'  class="space-y-5">
                         <h1 class='font-bold text-2xl' >Registro de Usuario</h1>
                         <!-- Username -->
                         <div class="mb-4">
-                            <label for="username" class="block text-sm font-medium text-gray-700">Nombre de Usuario</label>
+                            <label for="username" class="block text-sm font-medium text-gray-700">Usuario</label>
                             <input type="text" name="username" id="username" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
                         </div>
-
-                        <!-- Email -->
+                        <!-- Username -->
                         <div class="mb-4">
-                            <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
-                            <input type="email" name="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                            <label for="username" class="block text-sm font-medium text-gray-700">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
                         </div>
                         <!-- Role -->
                         <div class="mb-4">
-                            <label for="role" class="block text-sm font-medium text-gray-700">Rol</label>
-                            <select name="role" id="role" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
-                                <option value="Administrador">Administrador</option>
-                                <option value="Operador">Monitor</option>
-                                <option value="Usuario">Supevisor</option>
+                            <label for="role" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rol</label>
+                            <select name="role" id="role" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                                <option value="1">Administrador</option>
+                                <option value="2">Supevisor</option>
+                                <option value="3">Monitor</option>
                             </select>
                         </div>
                         <!-- Password -->

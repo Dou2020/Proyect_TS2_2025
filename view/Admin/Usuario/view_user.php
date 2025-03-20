@@ -43,7 +43,10 @@
                     <button onclick="openModal(<?php echo htmlspecialchars(json_encode($usuario)); ?>)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</button>
                 </td>
                 <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</a>
+                    <form method="POST" action="../../../controler/Admin/deleteUser.php" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
+                        <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
+                        <button type="submit" name="eliminar" class="font-medium text-red-600 dark:text-red-500 hover:underline">Eliminar</button>
+                    </form>
                 </td>
             </tr>
             <?php

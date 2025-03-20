@@ -1,4 +1,6 @@
 <?php
+    
+
     include '../model/login.php';
 
     // Iniciar sesión
