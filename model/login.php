@@ -1,4 +1,5 @@
 <?php
+
 function getUser($username, $password) {
     // Database credentials
     include '../db/index.php';

@@ -15,10 +15,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($role && password_verify($pass, $role['password'])) {
         switch ($role['rol_id']) {
             case '1':
+                session_start();
+                $_SESSION['user'] = [
+                    'rol_id' => $role['rol_id'],
+                    'username' => $role['id'],
+                    'nombre' => $role['nombre']
+                ];
                 header('Location: /proyect_ts2/view/Admin');
                 break;
             case '2':
-                header('Location: /proyect_ts2/view/Monitor');
+                session_start();
+                $_SESSION['user'] = [
+                    'rol_id' => $role['rol_id'],
+                    'username' => $role['id'],
+                    'nombre' => $role['nombre']
+                ];
+                header('Location: /proyect_ts2/view/Supervisor');
+                break;
+            case '3':
+                session_start();
+                $_SESSION['user'] = [
+                    'rol_id' => $role['rol_id'],
+                    'username' => $role['id'],
+                    'nombre' => $role['nombre']
+                ];
+                header('Location: /proyect_ts2/view/Monitor');                                                                              
                 break;
             default:
                 echo "Rol no reconocido.";

@@ -1,0 +1,158 @@
+{
+    "intersecciones": [
+        {
+            "calle": [
+                {
+                    "semáforos": [
+                        {
+                            "direccion": "Norte-Sur",
+                            "flujo": {
+                                "autos": [
+                                    30,
+                                    25,
+                                    20,
+                                    35
+                                ],
+                                "camiones": [
+                                    10,
+                                    15,
+                                    12,
+                                    15
+                                ],
+                                "motos": [
+                                    5,
+                                    5,
+                                    8,
+                                    10
+                                ],
+                                "bicicletas": [
+                                    0,
+                                    2,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "tiempo": {
+                                "verde": 30,
+                                "amarillo": 5,
+                                "rojo": 25
+                            }
+                        },
+                        {
+                            "direccion": "Sur-Norte",
+                            "flujo": {
+                                "autos": [
+                                    20,
+                                    25,
+                                    30,
+                                    15
+                                ],
+                                "camiones": [
+                                    5,
+                                    7,
+                                    6,
+                                    5
+                                ],
+                                "motos": [
+                                    3,
+                                    4,
+                                    6,
+                                    7
+                                ],
+                                "bicicletas": [
+                                    1,
+                                    0,
+                                    2,
+                                    0
+                                ]
+                            },
+                            "tiempo": {
+                                "verde": 25,
+                                "amarillo": 5,
+                                "rojo": 30
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "avenida": [
+                {
+                    "semáforos": [
+                        {
+                            "id": 3,
+                            "direccion": "Oeste-Este",
+                            "flujo": {
+                                "autos": [
+                                    40,
+                                    45,
+                                    35,
+                                    50
+                                ],
+                                "camiones": [
+                                    5,
+                                    8,
+                                    7,
+                                    5
+                                ],
+                                "motos": [
+                                    5,
+                                    6,
+                                    4,
+                                    6
+                                ],
+                                "bicicletas": [
+                                    1,
+                                    0,
+                                    1,
+                                    2
+                                ]
+                            },
+                            "tiempo": {
+                                "verde": 35,
+                                "amarillo": 5,
+                                "rojo": 20
+                            }
+                        },
+                        {
+                            "id": 4,
+                            "direccion": "Este-Oeste",
+                            "flujo": {
+                                "autos": [
+                                    30,
+                                    35,
+                                    25,
+                                    20
+                                ],
+                                "camiones": [
+                                    7,
+                                    6,
+                                    5,
+                                    8
+                                ],
+                                "motos": [
+                                    6,
+                                    4,
+                                    7,
+                                    5
+                                ],
+                                "bicicletas": [
+                                    2,
+                                    1,
+                                    3,
+                                    0
+                                ]
+                            },
+                            "tiempo": {
+                                "verde": 30,
+                                "amarillo": 5,
+                                "rojo": 25
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

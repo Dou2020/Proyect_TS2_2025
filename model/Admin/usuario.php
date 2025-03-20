@@ -68,7 +68,7 @@ function actualizarUsuario($datos) {
         // Consulta SQL
         $stmt = $conn->prepare("UPDATE usuarios SET nombre = :nombre, password = :password, rol_id = :rol_id WHERE id = :id");
         // Vincular parámetros
-        $stmt->bindParam(':id', $datos['id'], PDO::PARAM_INT);
+        $stmt->bindParam(':id', $datos['id'], PDO::PARAM_STR);
         $stmt->bindParam(':nombre', $datos['nombre'], PDO::PARAM_STR);
         $stmt->bindParam(':password', $datos['password'], PDO::PARAM_STR);
         $stmt->bindParam(':rol_id', $datos['rol_id'], PDO::PARAM_INT);
@@ -77,7 +77,7 @@ function actualizarUsuario($datos) {
 
         return true;
     } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        echo "Error actualizar usuario: " . $e->getMessage();
         return false;
     }
 }
