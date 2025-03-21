@@ -41,11 +41,8 @@ if ($_SESSION['user']['rol_id'] != 3) {
     <div class="container mx-auto mt-4">
         <h1 class="my-5 text-2xl font-bold">Bienvenido a la Monitor</h1>
     </div>
-    <div class='container mx-auto'>
-        <div class='flex flex-col items-center justify-center h-screen'>
-            <?php include '../pista/index.php' ?>
-        </div>
-    </div>
+
+    <?php include 'view_inter.php'; ?>
 
     <script>
         document.getElementById('navbar-toggler').addEventListener('click', function() {
